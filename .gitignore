@@ -1,4 +1,7 @@
- Compiled class file
+# IDEA settings
+/.idea
+
+# Compiled class file
 *.class
 
 # Log file
