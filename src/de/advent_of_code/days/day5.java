@@ -14,23 +14,22 @@ public class day5 {
 
         for (String s : list) {
 
-//        String s = "BBFFBBFRLL";
-
+            // get row, only 0-7 in string relevant
             int row = day5.getResult(s.substring(0, 7), 127, 'F');
 
+            // get column, only 7-10 relevant
             int column = day5.getResult(s.substring(7, 10), 7, 'L');
 
             int resultID = row * 8 + column;
 
-            System.out.print(resultID + "\n");
-
+            // all IDs to array
             arrayIDs.add(resultID);
 
         }
 
         System.out.print("Highest ID: " + Collections.max(arrayIDs));
 
-        day5.findSeat(arrayIDs);
+        System.out.print("\nMissing Seat found: " + day5.findSeat(arrayIDs));
 
     }
 
@@ -40,27 +39,20 @@ public class day5 {
         int max = maxCount;
         int diff;
 
+        // part 1 - get final half
         for (int i = 0; i < line.length(); i++) {
 
             diff = max - min;
 
             if (line.charAt(i) == upperChar) {
-
                 max = (min + (diff / 2));
-
             } else {
-
                 min = (int) (min + Math.ceil((double) diff / 2));
-
             }
-
-//            System.out.print("Iteration " + i + " Minimum row: " + (min) + " Maximum row: " + max + "\n");
 
         }
 
-//        System.out.print(line.charAt(line.length() - 1));
-
-        // final row/ column
+        // part 2 - get final row/ column
         int finalRow;
 
         if (line.charAt(line.length() - 1) == upperChar) {
@@ -68,10 +60,6 @@ public class day5 {
         } else {
             finalRow = max;
         }
-
-        // final column
-//        System.out.print("Final result: " + finalRow + "\n");
-
         return finalRow;
     }
 
@@ -79,25 +67,15 @@ public class day5 {
 
         Collections.sort(arrayIDs);
 
-        int missingID = 0;
+        int counter = arrayIDs.get(0);
 
-        for (int i = 1; i < arrayIDs.size() - 1; i++) {
+        for (Integer arrayID : arrayIDs) {
 
-            if ((arrayIDs.get(i) != arrayIDs.get(i - 1)+1)) {
-
-                missingID = arrayIDs.get(i);
-
-                // 662 is wrong
-
+            if (arrayID != counter) {
+                return counter;
             }
-
-            System.out.print((i) + "\n");
-
+            counter++;
         }
-
-        System.out.print("GEFUNDEN " + missingID);
-
-
         return 0;
     }
 }
