@@ -8,25 +8,19 @@ public class day1 {
 
     public static void main(String[] args) {
 
-        ReadFile readFile = new ReadFile();
-        List list;
+        List<String> list;
         list = ReadFile.readFile("/home/juha/Downloads/AdventCode/resource/data/day1");
 
-        int zahlEins = 0;
-        int zahlZwei = 0;
-        int result = 0;
-
+        int zahlEins,zahlZwei;
 
         for (int i = 0; i < list.size(); i++) {
 
             for (int j = 1; j < list.size(); j++) {
 
-                zahlEins = Integer.parseInt((String) list.get(i));
-                zahlZwei = Integer.parseInt((String) list.get(j));
-//                System.out.print(zahlZwei + zahlEins + "\n");
+                zahlEins = Integer.parseInt(list.get(i));
+                zahlZwei = Integer.parseInt(list.get(j));
 
                 if ((zahlEins + zahlZwei) == 2020) {
-                    result = zahlEins + zahlZwei;
                     System.out.print("Resultat = " + (zahlEins*zahlZwei) + "\n");
                     System.out.print("ZahlEins = " + zahlEins + "\n");
                     System.out.print("ZahlZwei = " + zahlZwei + "\n");
@@ -34,9 +28,7 @@ public class day1 {
                 }
             }
         }
-
         System.out.print("Nothing found");
-
     }
 
 }

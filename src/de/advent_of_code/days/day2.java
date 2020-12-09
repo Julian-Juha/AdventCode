@@ -41,7 +41,6 @@ public class day2 {
 
             // check & count if pw is correct
             if (actCount >= minMax[0] & actCount <= minMax[1]) {
-
                 totalNumberValidPasswords++;
             }
         }
