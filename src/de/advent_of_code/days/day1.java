@@ -30,5 +30,4 @@ public class day1 {
         }
         System.out.print("Nothing found");
     }
-
 }
