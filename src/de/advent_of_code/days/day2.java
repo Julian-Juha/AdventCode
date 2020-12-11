@@ -8,7 +8,7 @@ public class day2 {
 
     public static void main(String[] args) {
 
-        List<String> list = ReadFile.readFile("/home/juha/Downloads/AdventCode/resource/data/day2");
+        List<String> list = ReadFile.readFile("resource/data/day2");
 
         // end result to find
         int totalNumberValidPasswords = 0;

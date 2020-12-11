@@ -9,7 +9,7 @@ public class day3 {
     public static void main(String[] args) {
 
         List<String> list;
-        list = ReadFile.readFile("/home/juha/Downloads/AdventCode/resource/data/day3");
+        list = ReadFile.readFile("resource/data/day3");
 
         int treesHit = 0;
         int i = 0;

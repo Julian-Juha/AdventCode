@@ -9,7 +9,7 @@ public class day6 {
 
     public static void main(String[] args) {
 
-        List<String> list = ReadFile.readFile("/home/juha/Downloads/AdventCode/resource/data/day6");
+        List<String> list = ReadFile.readFile("resource/data/day6");
 
         ArrayList<String> resultArray = day6.getGroupedArray(list);
 

@@ -9,7 +9,7 @@ public class day1 {
     public static void main(String[] args) {
 
         List<String> list;
-        list = ReadFile.readFile("/home/juha/Downloads/AdventCode/resource/data/day1");
+        list = ReadFile.readFile("resource/data/day1");
 
         int zahlEins,zahlZwei;
 
