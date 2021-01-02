@@ -8,7 +8,7 @@ public class day5 {
 
     public static void main(String[] args) {
 
-        List<String> list = ReadFile.readFile("/home/juha/Downloads/AdventCode/resource/data/day5");
+        List<String> list = ReadFile.readFile("resource/data/day5");
 
         List<Integer> arrayIDs = new ArrayList<>();
 
